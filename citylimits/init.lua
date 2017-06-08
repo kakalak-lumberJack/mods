@@ -185,7 +185,7 @@ minetest.register_globalstep(function(dtime)
    worldtimer = 0
 
    for _,player in ipairs(minetest.get_connected_players()) do
-    if minetest.get_player_privs(player:get_player_name()).passport then return
+    if minetest.get_player_privs(player:get_player_name()).passport then break
     else
    	-- Where am I?
 		local pos = player:getpos()
@@ -194,62 +194,62 @@ minetest.register_globalstep(function(dtime)
 
 		if pos.x > city1_pos.x-200 and pos.x < city1_pos.x+200 and
 			pos.y > city1_pos.y-40 and pos.y < city1_pos.y+1000 and
-			pos.z > city1_pos.z-200 and pos.z < city1_pos.z+200 then return
+			pos.z > city1_pos.z-200 and pos.z < city1_pos.z+200 then break
 
 
 --check city2 limits
 		elseif
 			pos.x > city2_pos.x-200 and pos.x < city2_pos.x+200 and
 			pos.y > city2_pos.y-40 and pos.y < city2_pos.y+1000 and
-			pos.z > city2_pos.z-200 and pos.z < city2_pos.z+200 then return
+			pos.z > city2_pos.z-200 and pos.z < city2_pos.z+200 then break
 
 --check city3 limits
 		elseif
 			pos.x > city3_pos.x-2500 and pos.x < city3_pos.x+2500 and
 			pos.y > city3_pos.y-30000 and pos.y < city3_pos.y+5 and
-			pos.z > city3_pos.z-2500 and pos.z < city3_pos.z+2500 then return
+			pos.z > city3_pos.z-2500 and pos.z < city3_pos.z+2500 then break
 
 --check city4 limits
 		elseif
 			pos.x > city4_pos.x-2000 and pos.x < city4_pos.x+2000 and
 			pos.y > city4_pos.y-30000 and pos.y < city4_pos.y+10000 and
-			pos.z > city4_pos.z-2000 and pos.z < city4_pos.z+2000 then return
+			pos.z > city4_pos.z-2000 and pos.z < city4_pos.z+2000 then break
       
 --check city5 limits
 		elseif
 			pos.x > city5_pos.x-200 and pos.x < city5_pos.x+200 and
 			pos.y > city5_pos.y-80 and pos.y < city5_pos.y+1000 and
-			pos.z > city5_pos.z-200 and pos.z < city5_pos.z+200 then return
+			pos.z > city5_pos.z-200 and pos.z < city5_pos.z+200 then break
 			
 --check city6 limits
 		elseif
 			pos.x > city6_pos.x-200 and pos.x < city6_pos.x+200 and
 			pos.y > city6_pos.y-30000 and pos.y < city6_pos.y+10000 and
-			pos.z > city6_pos.z-200 and pos.z < city6_pos.z+200 then return			
+			pos.z > city6_pos.z-200 and pos.z < city6_pos.z+200 then break			
 
 --check city7 limits
 		elseif
 			pos.x > city7_pos.x-500 and pos.x < city7_pos.x+500 and
 			pos.y > city7_pos.y-2000 and pos.y < city7_pos.y+10000 and
-			pos.z > city7_pos.z-500 and pos.z < city7_pos.z+500 then return			
+			pos.z > city7_pos.z-500 and pos.z < city7_pos.z+500 then break			
 
 --check city8 limits
 		elseif
 			pos.x > city8_pos.x-200 and pos.x < city8_pos.x+200 and
 			pos.y > city8_pos.y-200 and pos.y < city8_pos.y+200 and
-			pos.z > city8_pos.z-200 and pos.z < city8_pos.z+200 then return	
+			pos.z > city8_pos.z-200 and pos.z < city8_pos.z+200 then break	
 			
 --check city9 limits
 		elseif
 			pos.x > city9_pos.x-200 and pos.x < city9_pos.x+200 and
 			pos.y > city9_pos.y-200 and pos.y < city9_pos.y+200 and
-			pos.z > city9_pos.z-200 and pos.z < city9_pos.z+200 then return
+			pos.z > city9_pos.z-200 and pos.z < city9_pos.z+200 then break
 			
 --check city10 limits
 		elseif
 			pos.x > city10_pos.x-200 and pos.x < city10_pos.x+200 and
 			pos.y > city10_pos.y-200 and pos.y < city10_pos.y+200 and
-			pos.z > city10_pos.z-200 and pos.z < city10_pos.z+200 then return							
+			pos.z > city10_pos.z-200 and pos.z < city10_pos.z+200 then break							
 
 --after all cities checked send players outside city limits without passport to spawn
 		else
